@@ -1,0 +1,192 @@
+/* utilities/site-additions.css */
+/* ---------- Commercial finance site additions ---------- */
+.page-hero .lede {
+  font-size: 1.22rem;
+  font-weight: 700;
+  color: var(--navy-700);
+  max-width: 720px;
+}
+.page-hero.has-photo .lede { color: rgba(255, 255, 255, 0.9); }
+
+.page-copy {
+  max-width: 800px;
+  margin-inline: auto;
+}
+.page-copy h2 {
+  font-size: clamp(1.45rem, 3vw, 1.85rem);
+  margin: 2.1rem 0 0.85rem;
+}
+.page-copy p { margin-bottom: 1rem; }
+.page-copy ul,
+.page-copy ol {
+  margin: 0 0 1.2rem 1.2rem;
+  color: var(--muted);
+  display: grid;
+  gap: 0.4rem;
+}
+.page-copy .btn { margin-top: 0.6rem; }
+
+.hero-disclaimer {
+  margin-top: 1.35rem;
+  max-width: 54ch;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.72);
+}
+.hero-ctas { flex-wrap: wrap; }
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1rem;
+}
+.process-step {
+  background: #fff;
+  border: 1px solid rgba(225, 231, 239, 0.9);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.35rem 1.7rem;
+  box-shadow: var(--shadow-sm);
+}
+.process-step .step-no {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  background: var(--navy-800);
+  color: #fff;
+  font-weight: 800;
+  margin-bottom: 0.9rem;
+}
+.process-step h3 { font-size: 1.15rem; margin-bottom: 0.45rem; }
+.process-step p { color: var(--muted); font-size: 0.95rem; }
+
+.audience-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.55rem 1.5rem;
+  margin: 1.2rem 0 1.6rem;
+}
+.split-body .audience-grid {
+  grid-template-columns: 1fr;
+}
+.scope-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0 1.4rem;
+}
+.scope-pills span {
+  background: var(--blue-50);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.38rem 0.85rem;
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: var(--navy-800);
+}
+.reg-panel {
+  background: #fff;
+  border: 1px solid rgba(225, 231, 239, 0.9);
+  border-radius: var(--radius-lg);
+  padding: clamp(1.6rem, 4vw, 2.4rem);
+  box-shadow: var(--shadow-sm);
+}
+.reg-panel p + p { margin-top: 0.85rem; }
+
+.form-check {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  margin-top: 1rem;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: var(--ink);
+}
+.form-check input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin-top: 0.28rem;
+  flex: none;
+  accent-color: var(--navy-800);
+}
+.gone-page {
+  max-width: 720px;
+  margin-inline: auto;
+  text-align: center;
+}
+.gone-page p { margin-inline: auto; margin-bottom: 0.9rem; }
+.gone-page .btn { margin-top: 0.8rem; }
+
+.footer-name {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 1.18rem;
+  color: #fff;
+  margin: 0 0 0.28rem;
+}
+.footer-tagline {
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-soft);
+  margin-bottom: 0.85rem;
+}
+.footer-contact-plain {
+  list-style: none;
+  display: grid;
+  gap: 0.35rem;
+  margin-bottom: 1.2rem;
+}
+.footer-contact-plain a { color: rgba(255, 255, 255, 0.9); }
+.site-footer address {
+  font-style: normal;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.78);
+  margin-bottom: 0.85rem;
+}
+.footer-company-no {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 46ch;
+}
+.footer-regulatory p {
+  font-size: 0.84rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.68);
+  max-width: none;
+  margin: 0;
+}
+.footer-legal-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem 1.15rem;
+}
+.footer-legal-links a {
+  color: rgba(255, 255, 255, 0.78);
+  text-decoration: none;
+  font-weight: 700;
+}
+.footer-legal-links a:hover { color: var(--gold-soft); }
+
+@media (max-width: 1200px) {
+  .card-grid.cols-5 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .card-grid.cols-5 > *,
+  .card-grid.cols-5 > :nth-child(4),
+  .card-grid.cols-5 > :nth-child(5) { grid-column: auto; }
+  .process-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 1020px) {
+  .process-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 720px) {
+  .process-grid,
+  .audience-grid { grid-template-columns: 1fr; }
+  .hero-disclaimer { max-width: none; }
+}

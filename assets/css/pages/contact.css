@@ -1,0 +1,72 @@
+/* pages/contact.css */
+/* ---------- Contact ---------- */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: clamp(2rem, 4vw, 3.5rem);
+  align-items: start;
+}
+
+.contact-card {
+  display: flex;
+  gap: 1.1rem;
+  align-items: flex-start;
+  background: #fff;
+  border: 1px solid rgba(225, 231, 239, 0.9);
+  border-radius: var(--radius);
+  padding: 1.4rem 1.5rem;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 1.1rem;
+  text-decoration: none;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+a.contact-card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
+.contact-card h3 { font-size: 1.12rem; margin-bottom: 0.15rem; }
+.contact-card p { color: var(--muted); font-size: 1rem; }
+.contact-card strong { color: var(--navy-800); font-size: 1.1rem; }
+
+.form-card {
+  background: #fff;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(225, 231, 239, 0.9);
+  box-shadow: var(--shadow-md);
+  padding: clamp(1.8rem, 4vw, 2.6rem);
+}
+.form-card h2 { font-size: 1.7rem; margin-bottom: 0.4rem; }
+.form-card > p { color: var(--muted); margin-bottom: 1.6rem; }
+
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem; }
+.form-field { display: flex; flex-direction: column; gap: 0.4rem; }
+.form-field.full { grid-column: 1 / -1; }
+.form-field label { font-weight: 800; font-size: 0.98rem; color: var(--navy-900); }
+.form-field input,
+.form-field select,
+.form-field textarea {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  color: var(--ink);
+  background: var(--bg);
+  border: 2px solid var(--line);
+  border-radius: 14px;
+  padding: 0.8rem 1rem;
+  min-height: 48px;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+.form-field textarea { resize: vertical; min-height: 130px; }
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  outline: none;
+  border-color: var(--navy-700);
+  background: #fff;
+}
+.form-note { font-size: 0.92rem; color: var(--muted); margin-top: 1rem; }
+
+.map-frame {
+  width: 100%;
+  height: 420px;
+  border: 0;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  display: block;
+}

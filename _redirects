@@ -1,7 +1,27 @@
+# Canonical URL moves
 /bridging-loan.html /commercial-bridging-finance.html 301
 /buy-to-let.html /limited-company-buy-to-let.html 301
 /buy-to-let-mortgage.html /limited-company-buy-to-let.html 301
 /advisory-service.html /business-funding-advisory.html 301
 /commercial-mortgage.html /commercial-mortgages.html 301
+/services.html /commercial-finance.html 301
 /portfolios/advisoryservice /business-funding-advisory.html 301
 /portfolios/advisoryservice/ /business-funding-advisory.html 301
+/portfolios/* /business-funding-advisory.html 301
+
+# Discontinued regulated / non-commercial URLs
+/first-time-buyer.html /410.html 410
+/remortgaging.html /410.html 410
+/life-insurance.html /410.html 410
+/income-protection.html /410.html 410
+/private-medical-insurance.html /410.html 410
+/critical-illness-insurance.html /410.html 410
+/buildings-contents-insurance.html /410.html 410
+/total-wealth-planning.html /410.html 410
+/savings-and-investments.html /410.html 410
+/pensions-advice.html /410.html 410
+/equity-release.html /410.html 410
+/wills-and-trust.html /410.html 410
+/estate-planning.html /410.html 410
+/incapacity-planning.html /410.html 410
+/faqs.html /410.html 410

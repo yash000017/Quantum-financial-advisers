@@ -1,0 +1,26 @@
+/* layout/page-hero.css */
+/* ---------- Page hero ---------- */
+.page-hero {
+  position: relative;
+  padding: clamp(3.5rem, 7vw, 5.5rem) 0;
+  background:
+    radial-gradient(700px 340px at 85% -10%, rgba(220, 234, 247, 0.65), transparent 70%),
+    radial-gradient(600px 320px at 0% 110%, rgba(243, 231, 204, 0.55), transparent 70%),
+    var(--bg);
+  text-align: center;
+  overflow: hidden;
+}
+.page-hero h1 { font-size: clamp(2.3rem, 5vw, 3.4rem); margin: 1.1rem 0 1rem; }
+.page-hero p { max-width: 640px; margin-inline: auto; color: var(--muted); font-size: 1.15rem; }
+
+.breadcrumb {
+  display: inline-flex;
+  gap: 0.55rem;
+  align-items: center;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--muted);
+  margin-top: 1.4rem;
+}
+.breadcrumb a { color: var(--navy-800); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }

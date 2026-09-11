@@ -1,0 +1,10 @@
+/* components/sections.css */
+/* ---------- Section headers ---------- */
+.section-head { max-width: 720px; margin-bottom: clamp(2.2rem, 5vw, 3.4rem); }
+.section-head.center { margin-inline: auto; text-align: center; }
+.section-head.center p { margin-inline: auto; }
+.section-head h2 {
+  font-size: clamp(1.9rem, 3.6vw, 2.7rem);
+  margin: 0.9rem 0 0.9rem;
+}
+.section-head p { color: var(--muted); font-size: 1.1rem; }

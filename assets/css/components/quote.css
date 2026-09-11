@@ -1,0 +1,22 @@
+/* components/quote.css */
+/* ---------- Quote / trust band ---------- */
+.quote-section { background: var(--bg-2); }
+.quote-card {
+  max-width: 860px;
+  margin-inline: auto;
+  background: #fff;
+  padding: clamp(2rem, 5vw, 3.2rem);
+  text-align: center;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+.quote-card .quote-mark {
+  font-family: var(--font-head);
+  font-size: 4rem;
+  line-height: 0.6;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 1.2rem;
+}
+.quote-card p.lead { font-size: 1.3rem; color: var(--navy-900); font-weight: 600; margin-inline: auto; }
+.quote-card footer { margin-top: 1.3rem; font-weight: 800; color: var(--navy-800); }

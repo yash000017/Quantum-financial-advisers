@@ -1,0 +1,38 @@
+/* abstracts/tokens.css */
+:root {
+  /* Colour tokens — muted steel-sapphire, closer to the logo */
+  --white: #FFFFFF;
+  --bg: #F4F6F8;
+  --bg-2: #E8EEF4;
+  --navy-900: #122033;
+  --navy-800: #1B4A86;
+  --navy-700: #2C5F9A;
+  --blue-500: #3E6FA8;
+  --blue-100: #D5E2F0;
+  --blue-50: #EEF3F8;
+  --gold: #C79A44;
+  --gold-deep: #A9812F;
+  --gold-soft: #F3E7CC;
+  --ink: #122033;
+  --muted: #5B6B80;
+  --line: #E1E8F2;
+
+  /* Type */
+  --font-head: 'Syne', 'Segoe UI', sans-serif;
+  --font-body: 'Plus Jakarta Sans', 'Segoe UI', sans-serif;
+
+  /* Shape & shadow */
+  --radius: 20px;
+  --radius-lg: 28px;
+  --shadow-sm: 0 2px 10px rgba(10, 37, 64, 0.06);
+  --shadow-md: 0 10px 30px rgba(10, 37, 64, 0.10);
+  --shadow-lg: 0 24px 60px rgba(10, 37, 64, 0.16);
+
+  --z-nav: 80;
+  --z-lightbox: 70;
+
+  --wrap: 1240px;
+  --topbar-h: 40px;
+  --nav-h: 88px;
+  --chrome-h: calc(var(--topbar-h) + var(--nav-h));
+}

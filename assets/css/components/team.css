@@ -1,0 +1,30 @@
+/* components/team.css */
+/* ---------- Team ---------- */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 380px));
+  gap: 1.8rem;
+  justify-content: center;
+}
+.team-card {
+  background: #fff;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(225, 231, 239, 0.9);
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+.team-card:hover { box-shadow: var(--shadow-md); transform: translateY(-5px); }
+.team-card img { width: 100%; height: 340px; object-fit: cover; object-position: top; }
+.team-card .team-body { padding: 1.5rem 1.6rem 1.8rem; }
+.team-card h3 { font-size: 1.35rem; }
+.team-card .role {
+  display: inline-block;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+  margin: 0.35rem 0 0.7rem;
+}
+.team-card p { color: var(--muted); font-size: 0.99rem; }

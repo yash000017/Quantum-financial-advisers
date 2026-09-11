@@ -1,6 +1,8 @@
 User-agent: *
 Allow: /
 
+Disallow: /src/
+Disallow: /scripts/
 Disallow: /first-time-buyer.html
 Disallow: /remortgaging.html
 Disallow: /life-insurance.html

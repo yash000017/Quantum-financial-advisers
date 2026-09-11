@@ -1,0 +1,50 @@
+/* components/buttons.css */
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  font-weight: 700;
+  text-decoration: none;
+  border: 2px solid transparent;
+  border-radius: 999px;
+  padding: 0.85rem 1.9rem;
+  min-height: 48px;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+.btn svg { flex: none; }
+
+.btn-primary {
+  background: var(--navy-800);
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(14, 59, 104, 0.28);
+}
+.btn-primary:hover { background: #163A6E; transform: translateY(-2px); }
+
+.btn-gold {
+  background: var(--gold);
+  color: var(--navy-900);
+  box-shadow: 0 8px 20px rgba(199, 154, 68, 0.32);
+}
+.btn-gold:hover { background: var(--gold-deep); color: #fff; transform: translateY(-2px); }
+
+.btn-ghost {
+  background: transparent;
+  color: var(--navy-800);
+  border-color: var(--navy-700);
+}
+.btn-ghost:hover { background: var(--blue-50); }
+
+.btn-light {
+  background: #fff;
+  color: var(--navy-800);
+  box-shadow: var(--shadow-sm);
+}
+.btn-light:hover { background: var(--blue-50); }

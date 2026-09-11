@@ -1,0 +1,5 @@
+# Quantum Financial Advisers Ltd — static marketing site
+# Netlify publishes the repository root. Redirects live in `_redirects`.
+
+[build]
+  publish = "."

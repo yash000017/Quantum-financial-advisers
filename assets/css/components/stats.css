@@ -1,0 +1,20 @@
+/* components/stats.css */
+/* ---------- Stats band ---------- */
+.stats-band {
+  background: linear-gradient(120deg, var(--navy-900), var(--navy-700));
+  border-radius: var(--radius-lg);
+  padding: clamp(2.2rem, 5vw, 3.4rem);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  color: #fff;
+  box-shadow: var(--shadow-lg);
+}
+.stat strong {
+  display: block;
+  font-family: var(--font-head);
+  font-size: clamp(2.1rem, 4vw, 2.9rem);
+  line-height: 1.1;
+}
+.stat strong span { font-size: inherit; font-family: inherit; opacity: 1; }
+.stat > span { display: block; opacity: 0.85; font-weight: 600; font-size: 0.98rem; }

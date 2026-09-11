@@ -1,0 +1,74 @@
+/* base/reset.css */
+/* ---------- Reset & base ---------- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(44, 95, 154, 0.4) transparent;
+}
+html::-webkit-scrollbar { width: 8px; }
+html::-webkit-scrollbar-track { background: transparent; }
+html::-webkit-scrollbar-thumb {
+  background: rgba(44, 95, 154, 0.38);
+  border-radius: 99px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: var(--ink);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+body:not(.home) {
+  padding-top: var(--chrome-h);
+}
+body.nav-open { overflow: hidden; }
+
+img { max-width: 100%; height: auto; display: block; }
+
+h1, h2, h3, h4 {
+  font-family: var(--font-head);
+  font-weight: 700;
+  line-height: 1.18;
+  color: var(--navy-900);
+  text-wrap: balance;
+}
+
+p { max-width: 65ch; }
+
+a { color: var(--blue-500); }
+
+:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+::selection { background: var(--blue-100); }
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  background: var(--navy-900);
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 0 0 12px 0;
+  z-index: 100;
+  text-decoration: none;
+}
+.skip-link:focus { left: 0; }
+
+.wrap {
+  width: min(var(--wrap), calc(100% - 2.5rem));
+  max-width: 100%;
+  margin-inline: auto;
+}
+
+section { padding: clamp(4rem, 8vw, 6.5rem) 0; }
