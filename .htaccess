@@ -1,0 +1,29 @@
+RewriteEngine On
+ErrorDocument 404 /404.html
+
+# Current commercial finance pages (301 from previous URLs)
+Redirect 301 /services.html /commercial-finance.html
+Redirect 301 /faqs.html /commercial-finance.html
+Redirect 301 /bridging-loan.html /commercial-bridging-finance.html
+Redirect 301 /buy-to-let.html /limited-company-buy-to-let.html
+Redirect 301 /buy-to-let-mortgage.html /limited-company-buy-to-let.html
+Redirect 301 /advisory-service.html /business-funding-advisory.html
+Redirect 301 /commercial-mortgage.html /commercial-mortgages.html
+Redirect 301 /portfolios/advisoryservice/ /business-funding-advisory.html
+Redirect 301 /portfolios/advisoryservice /business-funding-advisory.html
+
+# Discontinued regulated / non-commercial service URLs
+Redirect 410 /first-time-buyer.html
+Redirect 410 /remortgaging.html
+Redirect 410 /life-insurance.html
+Redirect 410 /income-protection.html
+Redirect 410 /private-medical-insurance.html
+Redirect 410 /critical-illness-insurance.html
+Redirect 410 /buildings-contents-insurance.html
+Redirect 410 /total-wealth-planning.html
+Redirect 410 /savings-and-investments.html
+Redirect 410 /pensions-advice.html
+Redirect 410 /equity-release.html
+Redirect 410 /wills-and-trust.html
+Redirect 410 /estate-planning.html
+Redirect 410 /incapacity-planning.html

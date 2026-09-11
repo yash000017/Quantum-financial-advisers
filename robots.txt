@@ -1,0 +1,27 @@
+User-agent: *
+Allow: /
+
+Disallow: /first-time-buyer.html
+Disallow: /remortgaging.html
+Disallow: /life-insurance.html
+Disallow: /income-protection.html
+Disallow: /private-medical-insurance.html
+Disallow: /critical-illness-insurance.html
+Disallow: /buildings-contents-insurance.html
+Disallow: /total-wealth-planning.html
+Disallow: /savings-and-investments.html
+Disallow: /pensions-advice.html
+Disallow: /equity-release.html
+Disallow: /wills-and-trust.html
+Disallow: /estate-planning.html
+Disallow: /incapacity-planning.html
+Disallow: /services.html
+Disallow: /faqs.html
+Disallow: /bridging-loan.html
+Disallow: /buy-to-let.html
+Disallow: /buy-to-let-mortgage.html
+Disallow: /advisory-service.html
+Disallow: /commercial-mortgage.html
+Disallow: /portfolios/
+
+Sitemap: https://quantum-fa.co.uk/sitemap.xml

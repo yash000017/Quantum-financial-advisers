@@ -149,8 +149,13 @@
     var subject = params.get('subject');
     var select = form.querySelector('select[name="enquiry_type"]');
     if (subject && select) {
+      var aliases = {
+        'business-funding-advisory': 'other-corporate-funding',
+        'general': 'other-corporate-funding'
+      };
+      var wanted = (aliases[subject.toLowerCase()] || subject).toLowerCase();
       Array.prototype.forEach.call(select.options, function (opt) {
-        if (opt.value.toLowerCase() === subject.toLowerCase()) select.value = opt.value;
+        if (opt.value.toLowerCase() === wanted) select.value = opt.value;
       });
     }
     form.addEventListener('submit', function () {
