@@ -2,8 +2,6 @@ RewriteEngine On
 ErrorDocument 404 /404.html
 
 # Current commercial finance pages (301 from previous URLs)
-Redirect 301 /services.html /commercial-finance.html
-Redirect 301 /faqs.html /commercial-finance.html
 Redirect 301 /bridging-loan.html /commercial-bridging-finance.html
 Redirect 301 /buy-to-let.html /limited-company-buy-to-let.html
 Redirect 301 /buy-to-let-mortgage.html /limited-company-buy-to-let.html

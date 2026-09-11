@@ -1,0 +1,28 @@
+{
+  "name": "Quantum Financial Advisers Ltd",
+  "short_name": "Quantum FA",
+  "description": "Commercial finance and business funding for UK companies and corporate borrowers.",
+  "start_url": "/index.html",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#264483",
+  "theme_color": "#264483",
+  "lang": "en-GB",
+  "icons": [
+    {
+      "src": "assets/images/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "assets/images/favicon.png",
+      "sizes": "164x164",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

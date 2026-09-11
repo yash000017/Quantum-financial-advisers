@@ -1,6 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="14" fill="#F5F7FA"/>
-  <circle cx="32" cy="32" r="20" fill="none" stroke="#0E3B68" stroke-width="4"/>
-  <path d="M32 14a18 18 0 0 1 0 36" fill="none" stroke="#C79A44" stroke-width="4" stroke-linecap="round"/>
-  <circle cx="32" cy="32" r="6" fill="#0E3B68"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Quantum Financial Advisers Ltd">
+  <rect width="64" height="64" rx="14" fill="#264483"/>
+  <circle cx="32" cy="30" r="15.5" fill="none" stroke="#ffffff" stroke-width="3.2"/>
+  <ellipse cx="32" cy="30" rx="6.2" ry="15.2" fill="none" stroke="#7eb3d9" stroke-width="1.6"/>
+  <path d="M16.8 30h30.4" fill="none" stroke="#7eb3d9" stroke-width="1.6"/>
+  <path d="M18 42c6.5 8.5 21.5 8.5 28 0" fill="none" stroke="#4f8fbf" stroke-width="3.2" stroke-linecap="round"/>
 </svg>

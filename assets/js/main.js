@@ -1,6 +1,7 @@
 /* Quantum Financial Advisers — shared interactions */
 (function () {
   'use strict';
+  document.documentElement.classList.add('js');
 
   var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -19,17 +20,20 @@
     navToggle.addEventListener('click', function () {
       var open = navLinks.classList.toggle('open');
       navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      document.body.classList.toggle('nav-open', open);
     });
     navLinks.addEventListener('click', function (e) {
       if (e.target.closest('a')) {
         navLinks.classList.remove('open');
         navToggle.setAttribute('aria-expanded', 'false');
+        document.body.classList.remove('nav-open');
       }
     });
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && navLinks.classList.contains('open')) {
         navLinks.classList.remove('open');
         navToggle.setAttribute('aria-expanded', 'false');
+        document.body.classList.remove('nav-open');
         navToggle.focus();
       }
     });
@@ -149,13 +153,8 @@
     var subject = params.get('subject');
     var select = form.querySelector('select[name="enquiry_type"]');
     if (subject && select) {
-      var aliases = {
-        'business-funding-advisory': 'other-corporate-funding',
-        'general': 'other-corporate-funding'
-      };
-      var wanted = (aliases[subject.toLowerCase()] || subject).toLowerCase();
       Array.prototype.forEach.call(select.options, function (opt) {
-        if (opt.value.toLowerCase() === wanted) select.value = opt.value;
+        if (opt.value.toLowerCase() === subject.toLowerCase()) select.value = opt.value;
       });
     }
     form.addEventListener('submit', function () {
@@ -170,4 +169,32 @@
   /* ---------- Footer year ---------- */
   var yearEl = document.querySelector('[data-year]');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  /* ---------- Hide top bar on scroll down, restore on scroll up ---------- */
+  var chrome = document.querySelector('.site-chrome');
+  var progress = document.querySelector('.scroll-progress');
+  var lastY = 0;
+  function onChromeScroll() {
+    var y = window.scrollY || 0;
+    if (chrome) chrome.classList.toggle('is-compact', y > lastY && y > 48);
+    if (progress) {
+      var max = document.documentElement.scrollHeight - window.innerHeight;
+      progress.style.width = (max > 0 ? (y / max) * 100 : 0) + '%';
+    }
+    lastY = y;
+  }
+  window.addEventListener('scroll', onChromeScroll, { passive: true });
+  onChromeScroll();
+
+  /* ---------- Pointer glow ---------- */
+  var glow = document.querySelector('.cursor-glow');
+  if (glow && window.matchMedia('(pointer: fine)').matches && !prefersReducedMotion) {
+    window.addEventListener('pointermove', function (e) {
+      glow.style.transform = 'translate(' + e.clientX + 'px,' + e.clientY + 'px)';
+      glow.classList.add('is-on');
+    }, { passive: true });
+    document.addEventListener('mouseleave', function () {
+      glow.classList.remove('is-on');
+    });
+  }
 })();
