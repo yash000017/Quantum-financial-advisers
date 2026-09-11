@@ -1,6 +1,6 @@
 {
   "name": "quantum-financial-advisers",
-  "account_id": "d3bef092e02a58b4fadf1af1d8200538",
+  "account_id": "d3bef092e62a58b4fadf1af1d8200538",
   "compatibility_date": "2026-09-11",
   "main": "src/worker.js",
   "workers_dev": false,
