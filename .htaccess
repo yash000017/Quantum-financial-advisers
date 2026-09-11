@@ -1,5 +1,6 @@
 RewriteEngine On
 ErrorDocument 404 /404.html
+ErrorDocument 410 /410.html
 
 # Current commercial finance pages (301 from previous URLs)
 Redirect 301 /bridging-loan.html /commercial-bridging-finance.html
@@ -9,6 +10,7 @@ Redirect 301 /advisory-service.html /business-funding-advisory.html
 Redirect 301 /commercial-mortgage.html /commercial-mortgages.html
 Redirect 301 /portfolios/advisoryservice/ /business-funding-advisory.html
 Redirect 301 /portfolios/advisoryservice /business-funding-advisory.html
+Redirect 301 /services.html /commercial-finance.html
 
 # Discontinued regulated / non-commercial service URLs
 Redirect 410 /first-time-buyer.html
@@ -25,3 +27,4 @@ Redirect 410 /equity-release.html
 Redirect 410 /wills-and-trust.html
 Redirect 410 /estate-planning.html
 Redirect 410 /incapacity-planning.html
+Redirect 410 /faqs.html

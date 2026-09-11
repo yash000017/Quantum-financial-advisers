@@ -15,6 +15,9 @@ Disallow: /equity-release.html
 Disallow: /wills-and-trust.html
 Disallow: /estate-planning.html
 Disallow: /incapacity-planning.html
+Disallow: /faqs.html
+Disallow: /410.html
+Disallow: /404.html
 Disallow: /bridging-loan.html
 Disallow: /buy-to-let.html
 Disallow: /buy-to-let-mortgage.html
