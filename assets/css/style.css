@@ -1325,24 +1325,6 @@ a.card:hover::after { transform: translateX(320%) rotate(18deg); }
   box-shadow: 0 16px 32px rgba(18, 32, 51, 0.22);
   z-index: 2;
 }
-.hero-brand-chip {
-  position: absolute;
-  right: 0.95rem;
-  bottom: 1.2rem;
-  z-index: 3;
-  display: inline-flex;
-  align-items: center;
-  background: #fff;
-  border-radius: 12px;
-  padding: 0.42rem 0.55rem;
-  box-shadow: 0 12px 26px rgba(18, 32, 51, 0.18);
-  line-height: 0;
-}
-.hero-brand-chip img {
-  height: 28px;
-  width: auto;
-  display: block;
-}
 .hero-cinematic .hero-badge {
   left: 50%;
   right: auto;
@@ -1656,7 +1638,6 @@ a.card:hover::after { transform: translateX(320%) rotate(18deg); }
 }
 .hero-float.hud-frame .hero-float-main { transform: translateZ(14px); }
 .hero-float.hud-frame .hero-float-inset { transform: translateZ(42px); }
-.hero-float.hud-frame .hero-brand-chip { transform: translateZ(48px); }
 .hud-frame::before,
 .hud-frame::after {
   content: "";
