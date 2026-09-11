@@ -1308,7 +1308,7 @@ a.card:hover::after { transform: translateX(320%) rotate(18deg); }
   width: 100%;
   height: min(500px, 58vw);
   object-fit: cover;
-  object-position: center;
+  object-position: 18% 48%;
   border-radius: 28px;
   box-shadow: 0 28px 56px rgba(18, 32, 51, 0.28);
 }
