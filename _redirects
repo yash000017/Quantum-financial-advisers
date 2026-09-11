@@ -9,19 +9,5 @@
 /portfolios/advisoryservice/ /business-funding-advisory.html 301
 /portfolios/* /business-funding-advisory.html 301
 
-# Discontinued regulated / non-commercial URLs
-/first-time-buyer.html /410.html 410
-/remortgaging.html /410.html 410
-/life-insurance.html /410.html 410
-/income-protection.html /410.html 410
-/private-medical-insurance.html /410.html 410
-/critical-illness-insurance.html /410.html 410
-/buildings-contents-insurance.html /410.html 410
-/total-wealth-planning.html /410.html 410
-/savings-and-investments.html /410.html 410
-/pensions-advice.html /410.html 410
-/equity-release.html /410.html 410
-/wills-and-trust.html /410.html 410
-/estate-planning.html /410.html 410
-/incapacity-planning.html /410.html 410
-/faqs.html /410.html 410
+# Discontinued URLs return HTTP 410 from src/worker.js.
+# Cloudflare _redirects only allows 200, 301, 302, 303, 307 and 308.

@@ -1,15 +1,47 @@
 {
   "name": "quantum-financial-advisers",
+  "account_id": "d3bef092e02a58b4fadf1af1d8200538",
   "compatibility_date": "2026-09-11",
+  "main": "src/worker.js",
   "workers_dev": false,
   "preview_urls": false,
-  "routes": [
-    { "pattern": "quantum-fa.co.uk", "custom_domain": true }
-  ],
   "assets": {
     "directory": ".",
+    "binding": "ASSETS",
     "not_found_handling": "404-page",
-    "html_handling": "auto-trailing-slash"
+    "html_handling": "auto-trailing-slash",
+    "run_worker_first": [
+      "/first-time-buyer",
+      "/first-time-buyer.html",
+      "/remortgaging",
+      "/remortgaging.html",
+      "/life-insurance",
+      "/life-insurance.html",
+      "/income-protection",
+      "/income-protection.html",
+      "/private-medical-insurance",
+      "/private-medical-insurance.html",
+      "/critical-illness-insurance",
+      "/critical-illness-insurance.html",
+      "/buildings-contents-insurance",
+      "/buildings-contents-insurance.html",
+      "/total-wealth-planning",
+      "/total-wealth-planning.html",
+      "/savings-and-investments",
+      "/savings-and-investments.html",
+      "/pensions-advice",
+      "/pensions-advice.html",
+      "/equity-release",
+      "/equity-release.html",
+      "/wills-and-trust",
+      "/wills-and-trust.html",
+      "/estate-planning",
+      "/estate-planning.html",
+      "/incapacity-planning",
+      "/incapacity-planning.html",
+      "/faqs",
+      "/faqs.html"
+    ]
   },
   "observability": {
     "enabled": true
