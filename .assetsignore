@@ -1,0 +1,24 @@
+# VCS / editor / Wrangler
+.git
+.github
+.vscode
+.cursor
+.wrangler
+.gitignore
+.gitattributes
+.assetsignore
+
+# Source and maintainer tools (not public pages)
+src
+scripts
+README.md
+netlify.toml
+.htaccess
+
+# Node / Wrangler config if present
+node_modules
+package.json
+package-lock.json
+wrangler.jsonc
+wrangler.json
+wrangler.toml

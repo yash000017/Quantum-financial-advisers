@@ -1,0 +1,13 @@
+{
+  "name": "quantum-financial-advisers",
+  "compatibility_date": "2026-09-11",
+  "preview_urls": false,
+  "assets": {
+    "directory": ".",
+    "not_found_handling": "404-page",
+    "html_handling": "auto-trailing-slash"
+  },
+  "observability": {
+    "enabled": true
+  }
+}
