@@ -164,6 +164,7 @@
 }
 
 @media (max-width: 720px) {
+  :root { --gutter: 1.35rem; }
   h1, h2, h3 { text-wrap: wrap; }
   .card-grid,
   .card-grid.cols-3,
@@ -182,6 +183,9 @@
     width: 100%;
     max-width: 100%;
     min-width: 0;
+    padding: calc(var(--chrome-h) + 1.6rem) max(1.35rem, env(safe-area-inset-right, 0px)) 2rem max(1.35rem, env(safe-area-inset-left, 0px));
+    gap: 1.35rem;
+    box-sizing: border-box;
   }
   .hero-copy,
   .hero-visual { width: 100%; max-width: 100%; min-width: 0; }
@@ -212,6 +216,16 @@
     width: 100%;
     white-space: normal;
     min-width: 0;
+  }
+  .hero-visual figure {
+    margin: 0;
+  }
+  .page-hero .wrap {
+    padding-left: max(1.35rem, env(safe-area-inset-left, 0px));
+    padding-right: max(1.35rem, env(safe-area-inset-right, 0px));
+  }
+  .page-hero.has-photo {
+    padding: 2.4rem 0 2rem;
   }
   .nav-actions .btn { width: auto; }
   .top-bar {

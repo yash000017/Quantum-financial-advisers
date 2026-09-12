@@ -25,7 +25,7 @@ LIVE_PAGES = [
     "terms-of-use.html",
 ]
 
-ASSET_VERSION = "20260914c"
+ASSET_VERSION = "20260914d"
 
 HEADER_START = "<!-- include:header -->"
 HEADER_END = "<!-- /include:header -->"

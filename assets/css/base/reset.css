@@ -72,12 +72,12 @@ a { color: var(--blue-500); }
 .skip-link:focus { left: 0; }
 
 .wrap {
-  width: min(var(--wrap), calc(100% - (var(--gutter) * 2)));
+  width: min(var(--wrap), 100%);
   max-width: 100%;
   min-width: 0;
   margin-inline: auto;
-  padding-left: env(safe-area-inset-left, 0px);
-  padding-right: env(safe-area-inset-right, 0px);
+  padding-left: max(var(--gutter), env(safe-area-inset-left, 0px));
+  padding-right: max(var(--gutter), env(safe-area-inset-right, 0px));
 }
 
 section { padding: clamp(2.6rem, 7vw, 6.5rem) 0; }
