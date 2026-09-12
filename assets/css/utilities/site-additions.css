@@ -28,7 +28,7 @@
 
 .hero-disclaimer {
   margin-top: 1.35rem;
-  max-width: 54ch;
+  max-width: min(54ch, 100%);
   font-size: 0.9rem;
   line-height: 1.55;
   color: rgba(255, 255, 255, 0.72);

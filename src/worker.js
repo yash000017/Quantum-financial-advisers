@@ -38,6 +38,19 @@ const SECURITY_HEADERS = {
   "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
 };
 
+function cacheControlFor(pathname) {
+  if (pathname.startsWith("/assets/")) {
+    return "public, max-age=31536000, immutable";
+  }
+  if (/\.(?:woff2|webp|png|jpg|jpeg|ico|svg)$/i.test(pathname)) {
+    return "public, max-age=31536000, immutable";
+  }
+  if (pathname.endsWith(".css") || pathname.endsWith(".js") || pathname.endsWith(".webmanifest")) {
+    return "public, max-age=604800";
+  }
+  return "public, max-age=300";
+}
+
 function pathnameOf(request) {
   const url = new URL(request.url);
   return url.pathname.replace(/\/+$/, "") || "/";
@@ -60,6 +73,16 @@ export default {
       });
     }
 
-    return env.ASSETS.fetch(request);
+    const asset = await env.ASSETS.fetch(request);
+    const headers = new Headers(asset.headers);
+    for (const [name, value] of Object.entries(SECURITY_HEADERS)) {
+      headers.set(name, value);
+    }
+    headers.set("Cache-Control", cacheControlFor(pathname));
+    return new Response(asset.body, {
+      status: asset.status,
+      statusText: asset.statusText,
+      headers,
+    });
   },
 };

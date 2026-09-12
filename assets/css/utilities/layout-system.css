@@ -23,15 +23,16 @@
 
 .hero-cinematic p,
 .hero-cinematic .hero-disclaimer {
-  max-width: 46ch;
+  max-width: min(46ch, 100%);
 }
 
 .hero-copy {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: stretch;
   width: 100%;
   max-width: 100%;
+  min-width: 0;
 }
 
 .hero-cinematic .eyebrow {
@@ -49,7 +50,7 @@
 }
 
 .page-hero.has-photo h1 {
-  max-width: min(16ch, 100%);
+  max-width: 100%;
   letter-spacing: -0.03em;
 }
 
@@ -163,6 +164,7 @@
 }
 
 @media (max-width: 720px) {
+  h1, h2, h3 { text-wrap: wrap; }
   .card-grid,
   .card-grid.cols-3,
   .card-grid.cols-5,
@@ -176,15 +178,22 @@
   .hero-cinematic-inner {
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    overflow: visible;
     width: 100%;
     max-width: 100%;
     min-width: 0;
   }
   .hero-copy,
   .hero-visual { width: 100%; max-width: 100%; min-width: 0; }
+  .hero-copy { align-items: stretch; }
+  .hero-copy > * { max-width: 100%; min-width: 0; }
   .hero-cinematic h1,
-  .page-hero.has-photo h1 { max-width: none; }
+  .page-hero.has-photo h1 {
+    max-width: 100%;
+    width: 100%;
+    text-wrap: wrap;
+    overflow-wrap: break-word;
+  }
   .hero-cinematic .eyebrow {
     display: flex;
     width: fit-content;
@@ -195,6 +204,7 @@
   .hero-cinematic .hero-disclaimer {
     width: 100%;
     max-width: 100% !important;
+    overflow-wrap: break-word;
   }
   .hero-ctas { width: 100%; }
   .hero-ctas .btn {
@@ -224,8 +234,19 @@
     overflow-wrap: anywhere;
     max-width: 100%;
   }
-  .hero-chips { width: 100%; }
-  .hero-chips a { white-space: normal; }
+  .hero-chips {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .hero-chips li,
+  .hero-chips a {
+    max-width: 100%;
+    min-width: 0;
+  }
+  .hero-chips a {
+    white-space: nowrap;
+  }
   .nav-actions { margin-left: auto; }
   .cta-inner .btn,
   .page-copy .btn,

@@ -1,6 +1,6 @@
 /* components/sections.css */
 /* ---------- Section headers ---------- */
-.section-head { max-width: 720px; margin-bottom: clamp(2.2rem, 5vw, 3.4rem); }
+.section-head { max-width: min(720px, 100%); margin-bottom: clamp(2.2rem, 5vw, 3.4rem); }
 .section-head.center { margin-inline: auto; text-align: center; }
 .section-head.center p { margin-inline: auto; }
 .section-head h2 {

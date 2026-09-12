@@ -20,7 +20,9 @@ export function initChrome() {
     if (hd) document.documentElement.style.setProperty('--nav-h', hd.offsetHeight + 'px');
   }
   measureChrome();
-  window.addEventListener('resize', measureChrome);
+  window.addEventListener('resize', function () {
+    requestAnimationFrame(measureChrome);
+  });
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(measureChrome);
 
   function applyScrollFrame() {

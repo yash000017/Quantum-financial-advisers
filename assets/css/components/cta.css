@@ -28,5 +28,5 @@
   bottom: -160px; left: -90px;
 }
 .cta-inner h2 { color: #fff; font-size: clamp(1.9rem, 4vw, 2.7rem); margin-bottom: 0.9rem; }
-.cta-inner p { color: rgba(255, 255, 255, 0.88); max-width: 560px; margin: 0 auto 1.9rem; font-size: 1.12rem; }
+.cta-inner p { color: rgba(255, 255, 255, 0.88); max-width: min(560px, 100%); margin: 0 auto 1.9rem; font-size: 1.12rem; }
 .cta-inner .btn { position: relative; z-index: 1; max-width: 100%; }
