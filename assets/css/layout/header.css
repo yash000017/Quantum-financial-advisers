@@ -40,14 +40,16 @@
   gap: 0.18rem;
   line-height: 1;
   text-decoration: none;
-  flex: 0 0 auto;
+  flex: 0 1 auto;
+  min-width: 0;
   position: relative;
   z-index: 2;
 }
 .brand img {
-  height: 42px;
+  height: auto;
+  max-height: 42px;
   width: auto;
-  max-width: 210px;
+  max-width: min(210px, 100%);
   background: transparent;
   border-radius: 0;
   padding: 0;
@@ -62,7 +64,7 @@
   text-transform: uppercase;
   color: var(--gold-deep);
   line-height: 1.25;
-  max-width: 220px;
+  max-width: 100%;
 }
 .brand .brand-icon {
   width: 44px; height: 44px;

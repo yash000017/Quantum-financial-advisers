@@ -11,6 +11,7 @@
   display: flex;
   gap: 1.1rem;
   align-items: flex-start;
+  min-width: 0;
   background: #fff;
   border: 1px solid rgba(225, 231, 239, 0.9);
   border-radius: var(--radius);
@@ -21,9 +22,10 @@
   transition: box-shadow 0.25s ease, transform 0.25s ease;
 }
 a.contact-card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
+.contact-card > div { min-width: 0; }
 .contact-card h3 { font-size: 1.12rem; margin-bottom: 0.15rem; }
-.contact-card p { color: var(--muted); font-size: 1rem; }
-.contact-card strong { color: var(--navy-800); font-size: 1.1rem; }
+.contact-card p { color: var(--muted); font-size: 1rem; overflow-wrap: anywhere; }
+.contact-card strong { color: var(--navy-800); font-size: 1.1rem; overflow-wrap: anywhere; }
 
 .form-card {
   background: #fff;
@@ -43,7 +45,9 @@ a.contact-card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px)
 .form-field select,
 .form-field textarea {
   font-family: var(--font-body);
-  font-size: 1.05rem;
+  font-size: 1rem;
+  width: 100%;
+  max-width: 100%;
   color: var(--ink);
   background: var(--bg);
   border: 2px solid var(--line);

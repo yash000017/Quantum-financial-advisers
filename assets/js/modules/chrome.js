@@ -92,26 +92,53 @@ function initMobileNav(chrome, state) {
 
   if (!navToggle || !navLinks) return;
 
+  function isMobileNav() {
+    return window.matchMedia('(max-width: 1180px)').matches;
+  }
+
   function closeSubmenus(except) {
     navLinks.querySelectorAll('.has-sub').forEach((item) => {
       if (item === except) return;
-      item.classList.remove('is-open');
-      const toggle = item.querySelector('.nav-sub-toggle');
-      if (toggle) toggle.setAttribute('aria-expanded', 'false');
+      setSubmenuOpen(item, false);
     });
+  }
+
+  function setSubmenuOpen(item, open) {
+    const toggle = item.querySelector('.nav-sub-toggle');
+    const parentLink = item.querySelector('.nav-parent a');
+    item.classList.toggle('is-open', open);
+    if (toggle) {
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      toggle.setAttribute('aria-label', open ? 'Close Services menu' : 'Open Services menu');
+    }
+    if (parentLink) {
+      if (isMobileNav()) {
+        parentLink.setAttribute('aria-expanded', open ? 'true' : 'false');
+      } else {
+        parentLink.removeAttribute('aria-expanded');
+      }
+    }
   }
 
   navLinks.querySelectorAll('.has-sub').forEach((item) => {
     const toggle = item.querySelector('.nav-sub-toggle');
-    if (!toggle) return;
-    toggle.addEventListener('click', function (e) {
+    const parentLink = item.querySelector('.nav-parent a');
+
+    function toggleSubmenu(e) {
       e.preventDefault();
       e.stopPropagation();
       const open = !item.classList.contains('is-open');
       closeSubmenus(open ? item : null);
-      item.classList.toggle('is-open', open);
-      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-    });
+      setSubmenuOpen(item, open);
+    }
+
+    if (toggle) toggle.addEventListener('click', toggleSubmenu);
+    if (parentLink) {
+      parentLink.addEventListener('click', function (e) {
+        if (!isMobileNav()) return;
+        toggleSubmenu(e);
+      });
+    }
   });
 
   if (!navToggle.querySelector('.nav-toggle-box')) {
@@ -129,6 +156,8 @@ function initMobileNav(chrome, state) {
     setNavOpen(!navLinks.classList.contains('open'));
   });
   navLinks.addEventListener('click', function (e) {
+    const parentLink = e.target.closest('.nav-parent a');
+    if (parentLink && isMobileNav()) return;
     if (e.target.closest('a') || e.target.closest('.nav-close')) {
       setNavOpen(false);
     }
@@ -137,8 +166,9 @@ function initMobileNav(chrome, state) {
     setNavOpen(false);
   });
   document.addEventListener('pointerdown', function (e) {
-    if (!e.target.closest('.has-sub')) closeSubmenus();
-    if (!navLinks.classList.contains('open')) return;
+    const drawerOpen = navLinks.classList.contains('open');
+    if (!drawerOpen && !e.target.closest('.has-sub')) closeSubmenus();
+    if (!drawerOpen) return;
     if (navLinks.contains(e.target) || navToggle.contains(e.target)) return;
     setNavOpen(false);
   });

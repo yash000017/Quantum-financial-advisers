@@ -9,6 +9,7 @@
 .card-grid.cols-5 {
   grid-template-columns: repeat(6, 1fr);
 }
+.card-grid > * { min-width: 0; }
 .card-grid.cols-5 > * {
   grid-column: span 2;
   min-width: 0;
@@ -48,7 +49,13 @@ a.card { text-decoration: none; display: block; cursor: pointer; }
   color: var(--gold-deep);
 }
 
-.card h3 { font-size: 1.32rem; margin: 1.1rem 0 0.55rem; }
+.card h3 {
+  font-size: 1.32rem;
+  margin: 1.1rem 0 0.55rem;
+  overflow-wrap: break-word;
+  word-break: normal;
+  hyphens: none;
+}
 .card p { color: var(--muted); font-size: 1rem; }
 
 .card .card-link {

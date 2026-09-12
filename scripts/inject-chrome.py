@@ -25,7 +25,7 @@ LIVE_PAGES = [
     "terms-of-use.html",
 ]
 
-ASSET_VERSION = "20260913w"
+ASSET_VERSION = "20260914a"
 
 HEADER_START = "<!-- include:header -->"
 HEADER_END = "<!-- /include:header -->"
@@ -111,6 +111,10 @@ def sync_page(path: Path, header: str, footer: str, head_assets: str) -> None:
         raise SystemExit(f"Could not find main.js script in {path.name}")
 
     html = html.replace("theme-color\" content=\"#07111F\"", "theme-color\" content=\"#122033\"")
+    html = html.replace(
+        'content="width=device-width, initial-scale=1"',
+        'content="width=device-width, initial-scale=1, viewport-fit=cover"',
+    )
     path.write_text(html, encoding="utf-8")
 
 

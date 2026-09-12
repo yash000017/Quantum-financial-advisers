@@ -6,6 +6,7 @@ html {
   scroll-behavior: smooth;
   scrollbar-width: thin;
   scrollbar-color: rgba(44, 95, 154, 0.4) transparent;
+  overflow-x: clip;
 }
 html::-webkit-scrollbar { width: 8px; }
 html::-webkit-scrollbar-track { background: transparent; }
@@ -23,14 +24,18 @@ body {
   color: var(--ink);
   background: var(--bg);
   -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
+  overflow-x: clip;
+  max-width: 100%;
 }
 body:not(.home) {
   padding-top: var(--chrome-h);
 }
 body.nav-open { overflow: hidden; }
 
-img { max-width: 100%; height: auto; display: block; }
+img, svg, video, canvas, iframe {
+  max-width: 100%;
+}
+img { height: auto; display: block; }
 
 h1, h2, h3, h4 {
   font-family: var(--font-head);
@@ -38,6 +43,7 @@ h1, h2, h3, h4 {
   line-height: 1.18;
   color: var(--navy-900);
   text-wrap: balance;
+  overflow-wrap: break-word;
 }
 
 p { max-width: 65ch; }
@@ -66,9 +72,11 @@ a { color: var(--blue-500); }
 .skip-link:focus { left: 0; }
 
 .wrap {
-  width: min(var(--wrap), calc(100% - 2.5rem));
+  width: min(var(--wrap), calc(100% - (var(--gutter) * 2)));
   max-width: 100%;
   margin-inline: auto;
+  padding-left: env(safe-area-inset-left, 0px);
+  padding-right: env(safe-area-inset-right, 0px);
 }
 
-section { padding: clamp(4rem, 8vw, 6.5rem) 0; }
+section { padding: clamp(2.6rem, 7vw, 6.5rem) 0; }

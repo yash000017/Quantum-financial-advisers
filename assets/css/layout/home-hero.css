@@ -91,8 +91,8 @@
 }
 .hero-cinematic h1 {
   color: #fff;
-  max-width: 14ch;
-  font-size: clamp(2.35rem, 4.6vw, 3.55rem);
+  max-width: min(14ch, 100%);
+  font-size: clamp(1.85rem, 4.6vw, 3.55rem);
   margin: 1.1rem 0 1rem;
   letter-spacing: -0.03em;
 }
@@ -342,10 +342,14 @@
 
 @media (max-width: 1020px) {
   .hero-cinematic-inner, .quote-split, .faq-layout { grid-template-columns: 1fr; }
-  .hero-cinematic-inner { padding: calc(var(--chrome-h) + 2.6rem) 0 2.6rem; }
-  .hero-visual { max-width: 420px; }
-  .hero-visual img { max-height: 380px; aspect-ratio: 16 / 11; }
-  .faq-visual img, .quote-split img { height: 260px; }
+  .hero-cinematic-inner { padding: calc(var(--chrome-h) + 2.2rem) 0 2.4rem; }
+  .hero-visual {
+    width: 100%;
+    max-width: none;
+    justify-self: stretch;
+  }
+  .hero-visual img { max-height: 400px; aspect-ratio: 16 / 10; }
+  .faq-visual img, .quote-split img { height: 240px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

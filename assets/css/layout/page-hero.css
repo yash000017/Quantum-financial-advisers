@@ -15,12 +15,14 @@
 
 .breadcrumb {
   display: inline-flex;
+  flex-wrap: wrap;
   gap: 0.55rem;
   align-items: center;
   font-weight: 700;
   font-size: 0.95rem;
   color: var(--muted);
   margin-top: 1.4rem;
+  max-width: 100%;
 }
 .breadcrumb a { color: var(--navy-800); text-decoration: none; }
 .breadcrumb a:hover { text-decoration: underline; }
